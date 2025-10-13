@@ -22,7 +22,7 @@ const partOfDay = function(){
 	return dayPart;
 }
 
-const pickOneSentence(rawText) = function(){
+/*const pickOneSentence(rawText) = function(){
 	//jagan teksti ";" järgi massiiviks, listiks
 	let oldWisdomList = rawText.split(";");
 	//console.log(oldWisdomList);
@@ -32,16 +32,16 @@ const pickOneSentence(rawText) = function(){
 	//loosin ja väljastan ühe vanasõna
 	let wisdomOfTheDay = oldWisdomList[Math.round(Math.random() * (wisdomCount - 1))];
 	console.log(wisdomOfTheDay);
-}
+} */
 
-const listWisdom(rawData) = function(){
+/*const listWisdom(rawData) = function(){
 	let folkWisdom = rawData.split(";");
 	for (let i = 0; i < folkWisdom.length; i++){
 		console.log((i + 1) + ") " + folkWisdom[i]);
 	}
-}
+} */
 
-const readTextFile() = function(){
+/*const readTextFile() = function(){
 	fs.readFile(textRef, "utf8", (err, data) => {
 		if(err){
 			console.log(err);
@@ -50,11 +50,12 @@ const readTextFile() = function(){
 			listWisdom(data);
 		}
 	});
-}
+} */
 
 
 
 
 
 //ekspordin kõik vajaliku
-module.exports = {fullDate: dateNowFormattedET, fullTime: timeNowFormattedET, partOfDay: partOfDay, someWisdom: listWisdom};
+//module.exports = {fullDate: dateNowFormattedET, fullTime: timeNowFormattedET, partOfDay: partOfDay, someWisdom: listWisdom};
+module.exports = {fullDate: dateNowFormattedET, fullTime: timeNowFormattedET, partOfDay: partOfDay};

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Tanel Metshein</title>
+ </head>
+<body>
+  <img src="vp_banner_2025_TA.jpg" alt="bänner">
+  <h1>Tanel Metshein, veebiprogrammeerimine</h1>
+  <p>See leht on loodud aastal 2025 <a href="https://www.tlu.ee">Tallina Ülikoolis</a></p>
+  <hr>
+  <ul>
+	<li><a href="/">Avaleht</a></li>
+  </ul>
+  <hr>
+  <h2><%= heading %></h2>
+  <ul>
+    <!--   % märkidega on ejs kood muutujate näitamiseks -->
+	<% listData.forEach(function(listItem){ %>
+		<li><%= listItem %></li>
+	<% }); %>
+  </ul>
+</body>
+</html>

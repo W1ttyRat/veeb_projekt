@@ -34,8 +34,18 @@ function readTextFile(){
 }
 
 
+<<<<<<< HEAD
 console.log("Täna on " + dateEt.fullDate());
 console.log("Kell on " + dateEt.fullTime());
 console.log("On " + dateEt.partOfDay() + ".");
 console.log("Tänane vanasõna on:");
 readTextFile();
+=======
+/* console.log("Täna on " + dateEt.fullDate());
+console.log("Kell on " + dateEt.fullTime());
+console.log("On " + dateEt.partOfDay() + ".");
+console.log("Tänane vanasõna on:");
+readTextFile(); */
+
+module.exports = {testTwo: readTextFile};
+>>>>>>> b8c3660 (lisatud hobi pilt ja uus address)
