@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Tanel Metshein</title>
+  </head>
+<body>
+  <img src="/img/vp_banner_2025_TA.jpg" alt="bänner">
+  <h1>Tanel Metshein, veebiprogrammeerimine</h1>
+  <p>See leht on loodud aastal 2025 <a href="https://www.tlu.ee">Tallina Ülikoolis</a></p>
+  <hr>
+  <ul>
+	<li><a href="/">Avaleht</a></li>
+	<li><a href="/Eestifilm">Eesti filmi avaleht</a></li>
+  </ul>
+  <hr>
+  <h2>Eesti filmi seosed isikutega ja positsioonidega</h2>
+  
+  <form action="/Eestifilm/eestifilm_seosed" method="POST">
+  
+  <label>Isik:</label>
+  <select name="person_id" required>
+    <option value="">Vali isik</option>
+    <% people.forEach(p => { %>
+      <option value="<%= p.id %>"><%= p.first_name %> <%= p.last_name %></option>
+    <% }); %>
+  </select>
+
+  <label>Film:</label>
+  <select name="movie_id" required>
+    <option value="">Vali film</option>
+    <% movies.forEach(m => { %>
+      <option value="<%= m.id %>"><%= m.title %></option>
+    <% }); %>
+  </select>
+
+  <label>Positsioon:</label>
+  <select name="position_id" required>
+    <option value="">Vali positsioon</option>
+    <% positions.forEach(pos => { %>
+      <option value="<%= pos.id %>"><%= pos.position_name %></option>
+    <% }); %>
+  </select>
+
+  <button type="submit">Lisa seos</button>
+</form>
+
+</body>
+</html>

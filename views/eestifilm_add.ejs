@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Tanel Metshein</title>
+  </head>
+<body>
+  <img src="/img/vp_banner_2025_TA.jpg" alt="bänner">
+  <h1>Tanel Metshein, veebiprogrammeerimine</h1>
+  <p>See leht on loodud aastal 2025 <a href="https://www.tlu.ee">Tallina Ülikoolis</a></p>
+  <hr>
+  <ul>
+	<li><a href="/">Avaleht</a></li>
+	<li><a href="/Eestifilm">Eesti filmi avaleht</a></li>
+  </ul>
+  <hr>
+  <h2>Eesti filmi lisamine andmebaasi</h2>
+  <form method="POST">
+    <label for="titleInput">Filmi nimi</label>
+	<input id="titleInput" name="titleInput" type="text" placeholder="Nimi..." required>
+	<br>
+	<label for="productionYearInput">Filmi loomise aasta</label>
+	<input id="productionYearInput" name="productionYearInput" type="text" placeholder="Loomis aasta..." required>
+	<br>
+	<label for="durationInput">Filmi kestvus minutides</label>
+	<input id="durationInput" name="durationInput" type="text" placeholder="Kestvus..." required>
+	<br>
+	<label for="descriptionInput">Filmi kirjeldus</label>
+	<input id="descriptionInput" name="descriptionInput" type="text" placeholder="Kirjeldus..." required>
+	<br>
+	<button type="submit">Salvesta</button>
+  </form>
+  <p>Staatus: <%= notice %></p>
+</body>
+</html>

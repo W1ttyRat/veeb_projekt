@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Tanel Metshein</title>
+  </head>
+<body>
+  <img src="/img/vp_banner_2025_TA.jpg" alt="bänner">
+  <h1>Tanel Metshein, veebiprogrammeerimine</h1>
+  <p>See leht on loodud aastal 2025 <a href="https://www.tlu.ee">Tallina Ülikoolis</a></p>
+  <hr>
+  <ul>
+	<li><a href="/">Avaleht</a></li>
+	<li><a href="/Eestifilm">Eesti filmi avaleht</a></li>
+  </ul>
+  <hr>
+  <h1>Lisa uus positsioon</h1>
+	
+    <form method="POST" action="/Eestifilm/positsion_add">
+        <label for="positionNameInput">Positsiooni nimi:</label>
+        <input type="text" id="positionNameInput" name="positionNameInput" placeholder="nt. režissöör" required>
+
+        <label for="descriptionInput">Kirjeldus:</label>
+        <textarea id="descriptionInput" name="descriptionInput" rows="4" placeholder="Lisa lühikirjeldus" required></textarea>
+
+        <button type="submit">Salvesta</button>
+    </form>
+  <p>Staatus: <%= notice %></p>
+</body>
+</html>

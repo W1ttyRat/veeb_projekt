@@ -14,10 +14,10 @@
 	<li><a href="/Eestifilm">Eesti filmi avaleht</a></li>
   </ul>
   <hr>
-  <h2>Eesti filmi inimesed</h2>
+  <h2>Eesti filmi inimesete positsioonid</h2>
   <ol>
-   <% personList.forEach(function(listItem){ %>
-	 <li><%= listItem.first_name %> <%= listItem.last_name %>, sündinud <%= listItem.born %></li>
+   <% positsionList.forEach(function(listItem){ %>
+	 <li><%= listItem.position_name %>, <%= listItem.description %></li>
    <% }); %>
   </ol>
 </body>
