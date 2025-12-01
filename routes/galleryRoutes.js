@@ -1,6 +1,9 @@
 const express = require("express");
+const loginCheck = require("../src/checkLogin");
 
 const router = express.Router();
+//kõigile marsruutidele lisan vahevara sisselogimise kontrollimiseks
+router.use(loginCheck.isLogin);
 
 //kontrollerid
 const {galleryHome, galleryPage} = require("../controllers/galleryControllers");

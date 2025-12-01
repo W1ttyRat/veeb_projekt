@@ -5,44 +5,15 @@ const dbConf = {
   host: dbInfo.configData.host,
   user: dbInfo.configData.user,
   password: dbInfo.configData.passWord,
-  database: "if25_tanemets"
+  database: dbInfo.configData.dataBase
 };
 
 // @desc home page for photogallery
 // @route GET /photogallery
 // @access public
+
+
 const galleryHome = async (req, res) => {
-  /*let conn;
-  try {
-    conn = await mysql.createConnection(dbConf);
-    const sqlReq = "SELECT filename, alttext FROM galleryphotos_ta WHERE privacy >= ? AND deleted IS NULL";
-    const privacy = 2;
-    const [rows] = await conn.execute(sqlReq, [privacy]);
-
-    console.log(rows);
-    let galleryData = [];
-
-    for (let i = 0; i < rows.length; i++) {
-      let alttext = "Galeriipilt";
-      if (rows[i].alttext && rows[i].alttext.trim() !== "") {
-        alttext = rows[i].alttext;
-      }
-      galleryData.push({ src: rows[i].filename, alt: alttext });
-    }
-
-    res.render("gallery", {
-      galleryData: galleryData,
-      imagehref: "/gallery/thumbs/"
-    });
-  } catch (err) {
-    console.log(err);
-    res.render("gallery", { galleryData: [], imagehref: "/gallery/thumbs/" });
-  } finally {
-    if (conn) {
-      await conn.end();
-      console.log("Andmebaasiühendus on suletud!");
-    }
-  } */
   res.redirect("/gallery/1");
 };
 
